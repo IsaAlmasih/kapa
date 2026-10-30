@@ -76,96 +76,97 @@ export default function Page() {
   }, [activeIndex]); // Обработчики используют актуальный индекс через обновление состояния
 
   return (
-    <main className={styles.wrapper}>
-      <h1>Моё творчество</h1>
-
-      <div className={styles.wrap}>
-        <div className={styles.wrapGrid}>
-          {images.map((image, index) => (
-            <Image
-              key={`${image}-${index}`}
-              src={image}
-              alt={`Фото ${index + 1}`}
-              width={200}
-              height={200}
-              className={styles.image}
-              onClick={() => setActiveIndex(index)}
-            />
-          ))}
-        </div>
-
-        <button
-          type="button"
-          onClick={() => router.back()}
-          className={styles.button}
-        >
-          {"<--"} Назад
-        </button>
-      </div>
-
-      {activeIndex !== null && (
-        <div
-          className={styles.viewer}
-          onClick={closeViewer}
-          role="dialog"
-          aria-modal="true"
-          aria-label="Просмотр фотографий"
-        >
-          <button
-            type="button"
-            className={`${styles.viewerArrow} ${styles.viewerArrowLeft}`}
-            onClick={(event) => {
-              event.stopPropagation();
-              showPrevious();
-            }}
-            aria-label="Предыдущая фотография"
-          >
-            &#10094;
-          </button>
-
-          <div
-            className={styles.viewerContent}
-            onClick={(event) => event.stopPropagation()}
-          >
-            <Image
-              src={images[activeIndex]}
-              alt={`Фото ${activeIndex + 1}`}
-              width={1200}
-              height={900}
-              className={styles.viewerImage}
-              priority
-            />
-
-            <div className={styles.viewerCounter}>
-              {activeIndex + 1} / {images.length}
-            </div>
+    <>
+      <div className={styles.wrapper}>
+        <h1>Моё творчество</h1>
+        <div className={styles.wrap}>
+          <div className={styles.wrapGrid}>
+            {images.map((image, index) => (
+              <Image
+                key={`${image}-${index}`}
+                src={image}
+                alt={`Фото ${index + 1}`}
+                width={200}
+                height={200}
+                className={styles.image}
+                onClick={() => setActiveIndex(index)}
+              />
+            ))}
           </div>
 
           <button
             type="button"
-            className={`${styles.viewerArrow} ${styles.viewerArrowRight}`}
-            onClick={(event) => {
-              event.stopPropagation();
-              showNext();
-            }}
-            aria-label="Следующая фотография"
+            onClick={() => router.back()}
+            className={styles.button}
           >
-            &#10095;
-          </button>
-
-          <button
-            type="button"
-            className={styles.viewerClose}
-            onClick={(event) => {
-              event.stopPropagation();
-              closeViewer();
-            }}
-            aria-label="Закрыть просмотр"
-          >
-            &times;
+            {"<--"} Назад
           </button>
         </div>
-      )}
-    </main>
+
+        {activeIndex !== null && (
+          <div
+            className={styles.viewer}
+            onClick={closeViewer}
+            role="dialog"
+            aria-modal="true"
+            aria-label="Просмотр фотографий"
+          >
+            <button
+              type="button"
+              className={`${styles.viewerArrow} ${styles.viewerArrowLeft}`}
+              onClick={(event) => {
+                event.stopPropagation();
+                showPrevious();
+              }}
+              aria-label="Предыдущая фотография"
+            >
+              &#10094;
+            </button>
+
+            <div
+              className={styles.viewerContent}
+              onClick={(event) => event.stopPropagation()}
+            >
+              <Image
+                src={images[activeIndex]}
+                alt={`Фото ${activeIndex + 1}`}
+                width={1200}
+                height={900}
+                className={styles.viewerImage}
+                priority
+              />
+
+              <div className={styles.viewerCounter}>
+                {activeIndex + 1} / {images.length}
+              </div>
+            </div>
+
+            <button
+              type="button"
+              className={`${styles.viewerArrow} ${styles.viewerArrowRight}`}
+              onClick={(event) => {
+                event.stopPropagation();
+                showNext();
+              }}
+              aria-label="Следующая фотография"
+            >
+              &#10095;
+            </button>
+
+            <button
+              type="button"
+              className={styles.viewerClose}
+              onClick={(event) => {
+                event.stopPropagation();
+                closeViewer();
+              }}
+              aria-label="Закрыть просмотр"
+            >
+              &times;
+            </button>
+          </div>
+        )}
+      </div>
+    </>
   );
 }
