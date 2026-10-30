@@ -5,12 +5,11 @@
   margin-top: 100px;
   font-size: 26px;
   color: rgb(0, 0, 0);
-  text-align: center; 
+  text-align: center;
   justify-content: center;
   gap: 20px;
-  padding:30px ;
-} 
-
+  padding: 30px;
+}
 
 /* Сетка фотографий — при необходимости подстройте под свою разметку */
 .wrapGrid {
@@ -137,7 +136,29 @@
   outline-offset: 3px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 340px) {
+  .wrapper {
+    /* background-color: blue; */
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  /* Сетка фотографий — при необходимости подстройте под свою разметку */
+  .wrapGrid {
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100px;
+    gap: 10px;
+  }
+
   .viewer {
     padding: 56px 52px;
   }
@@ -162,18 +183,147 @@
   }
 }
 
+@media (max-width: 370px) {
+  .wrapper {
+    /* background-color: blue; */
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+  }
 
+  /* Сетка фотографий — при необходимости подстройте под свою разметку */
+  .wrapGrid {
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100px;
+    gap: 10px;
+  }
 
+  .viewer {
+    padding: 56px 52px;
+  }
 
+  .viewerImage {
+    max-width: 100%;
+    max-height: 75vh;
+  }
 
+  .viewerArrow {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
 
+  .viewerArrowLeft {
+    left: 8px;
+  }
 
+  .viewerArrowRight {
+    right: 8px;
+  }
+}
 
+@media (max-width: 400px) {
+  .wrapper {
+    /* background-color: blue; */
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+  }
 
+  /* Сетка фотографий — при необходимости подстройте под свою разметку */
+  .wrapGrid {
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100px;
+    gap: 10px;
+  }
 
+  .viewer {
+    padding: 56px 52px;
+  }
 
+  .viewerImage {
+    max-width: 100%;
+    max-height: 75vh;
+  }
 
+  .viewerArrow {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
 
+  .viewerArrowLeft {
+    left: 8px;
+  }
+
+  .viewerArrowRight {
+    right: 8px;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .wrapper {
+    /* background-color: blue; */
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  /* Сетка фотографий — при необходимости подстройте под свою разметку */
+  .wrapGrid {
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 170px;
+    gap: 5px;
+  }
+
+  .viewer {
+    padding: 56px 52px;
+  }
+
+  .viewerImage {
+    max-width: 100%;
+    max-height: 75vh;
+  }
+
+  .viewerArrow {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+
+  .viewerArrowLeft {
+    left: 8px;
+  }
+
+  .viewerArrowRight {
+    right: 8px;
+  }
+}
 
 /* .wrapper {
   background-color: blue;
