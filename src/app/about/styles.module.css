@@ -1,0 +1,103 @@
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  width: 100%;
+}
+
+.image {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+
+.wrapGrid {
+  display: grid;
+  grid-template-columns: 200px 200px 200px 200px;
+  flex-wrap: wrap;
+  column-gap: 50px;
+  justify-content: center;
+  width: 100%;
+  margin-top: 70px;
+}
+
+/* Увеличенное изображение располагается по центру окна */
+.imageExpanded {
+  position: fixed;
+  z-index: 1000;
+  top: 50%;
+  left: 50%;
+  width: min(90vw, 900px);
+  height: min(85vh, 700px);
+  object-fit: contain;
+  transform: translate(-50%, -50%);
+}
+
+.button {
+  cursor: pointer;
+}
+
+/* Необязательно: базовое оформление страницы */
+.container {
+  width: 100%;
+
+}
+
+.wrapp {
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+/* .wrapp {
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column; */
+  /* align-items: center; центрируем содержимое по горизонтали */
+  /* justify-content: center;
+  padding: 16px;
+  gap: 16px;
+} */
+
+/* новый контейнер-grid, центрируем и задаём адаптивность */
+/* .wrapGrid { */
+  /* display: grid; */
+  /* grid-template-columns: 350px 350px 350px; */
+  /* grid-template-rows: 250px 250px 250px ; */
+  /* gap: 6px; */
+  /* justify-items: center; выравнивание элементов по горизонтали внутри ячеек */
+  /* align-items: center; */
+  /* width: min(100%, 1000px); ограничиваем ширину, чтобы центрировать лучше */
+/* } */
+
+/* .wrapGrid img {
+  width: 150px;
+  height: 100px;
+  object-fit: cover;
+  cursor: pointer;
+  display: block;
+}
+
+.button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #eee;
+  color: #333;
+} */

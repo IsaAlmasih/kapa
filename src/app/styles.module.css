@@ -1,0 +1,63 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-top: 150px;
+  font-size: 26px;
+  text-align: center; 
+  justify-content: center;
+  gap: 20px;
+}
+
+.wrapGrid {
+  justify-content: center;
+  display: grid;
+  grid-template-columns: 200px 200px 200px 200px;
+  grid-template-rows: 150px 150px 150px;
+  gap: 40px;
+}
+
+.wrapp {
+  font-size: 46px;
+  text-align: center;
+  justify-content: center;
+}
+
+.image {
+  width: 250px;
+  height: 200px;
+  object-fit: cover;
+  cursor: pointer;
+  padding: 10px;
+}
+
+/* Увеличенное изображение располагается по центру окна */
+.imageExpanded {
+  position: fixed;
+  z-index: 1000;
+  top: 50%;
+  left: 50%;
+  width: min(90vw, 900px);
+  height: min(85vh, 700px);
+  object-fit: contain;
+  transform: translate(-50%, -50%);
+}
+
+.button {
+  cursor: pointer;
+}
+
+/* 
+
+
+/* @media (max-width: 625px) {
+  .photos {
+    grid-template-columns: 1fr 1fr;
+  }
+  .footer {
+    gap: 0px !important ;
+  }
+  .footerCol {
+    font-size: 15px;
+    text-transform: lowercase;
+  }
+} */
