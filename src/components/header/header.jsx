@@ -59,7 +59,7 @@ const Header = () => {
 
             <div className={styles.navigation}>
               <Link href={"/"}>Главная страница</Link>
-              <Link href={"/about"}>О нас</Link>
+              <Link href={"/"}>О нас</Link>
               <Link href={"/"}>Контакты</Link>
             </div>
           </div>
